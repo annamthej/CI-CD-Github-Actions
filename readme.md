@@ -368,6 +368,8 @@ jobs:
 
 ```
 
+![alt text](<.images/Screenshot 2025-12-02 131416.png>)
+
 ```yml
 name: Docker Build (CI)
 on:
@@ -398,7 +400,7 @@ jobs:
 ```
 
 
-
+![alt text](.images/image.png)
 
 
 
