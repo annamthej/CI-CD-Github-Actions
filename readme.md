@@ -316,6 +316,22 @@ jobs:
 ```
 
 
+13. Build and push the image to dockerhub using GitHub Actions 
+
+
+
+
+
+
+
+
+
+
+
+
+===
+
+
 
 # Nodejs Code Initialize Process from starting 
 ## 1. Nodejs project structure
