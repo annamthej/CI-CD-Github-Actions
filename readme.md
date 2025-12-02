@@ -406,6 +406,41 @@ jobs:
 
 ===
 
+15. Push the image to GHCR and give read and write permissions for workflow to use to the user
+ - create token with required permissions to push image to GHCR 
+ - copy token and paste into secrets 
+
+```yml
+name: Docker Build (CI)
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Login to GHCR
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GH_TOKEN }}
+      - name: Build docker image
+        run: |
+          docker build -t ghcr.io/${{ github.repository_owner }}/myapp:ci .
+      - name: Push docker image
+        run: |
+          docker push ghcr.io/${{ github.repository_owner }}/myapp:ci
+
+```
+
+![alt text](.images/image-1.png)
+
 
 
 # Nodejs Code Initialize Process from starting 
