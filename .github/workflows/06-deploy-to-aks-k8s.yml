@@ -36,4 +36,8 @@ jobs:
         run: |
           kubectl apply -f k8s-nginx.yml
 
+      - name: check pods 
+        run: | 
+          kubectl get pods 
+
           
