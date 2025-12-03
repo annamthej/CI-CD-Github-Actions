@@ -34,16 +34,6 @@ jobs:
           kubectl get nodes
       - name: Deploy to Kubernetes
         run: |
-          set -e   # stop script if any command fails
+          kubectl apply -f k8s-nginx.yml
 
-          kubectl set image deployment/nginx-deploy nginx=httpd:latest
-          echo "Deployment initiated"
-
-          # Wait for rollout
-          if ! kubectl rollout status deployment/nginx-deploy --timeout=60s; then
-            echo "Rollout failed, initiating rollback"
-            kubectl rollout undo deployment/nginx-deploy
-            exit 1
-          else
-            echo "Rollout successful"
-          fi 
+          
