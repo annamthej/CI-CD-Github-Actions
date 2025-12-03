@@ -34,7 +34,7 @@ jobs:
           kubectl get nodes
       - name: Deploy to Kubernetes
         run: |
-          kubectl apply -f k8s-nginx.yml
+          kubectl apply -f k8s-myapp.yml
 
       - name: check pods 
         run: | 

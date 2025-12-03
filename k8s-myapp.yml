@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: myapp-nodejs-deploy
+  labels:
+    app: myapp-nodejs
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: myapp-nodejs
+  template:
+    metadata:
+      labels:
+        app: myapp-nodejs
+    spec:
+      containers:
+        - name: myapp-nodejs
+          image: navathej408/myapp:ci
