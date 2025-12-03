@@ -443,6 +443,45 @@ jobs:
 
 
 
+
+16. Setting Up SelfHosted Runner in GitHub  
+  
+  ```
+  -> Goto CI-CD-Github-Actions repo
+	-> Actions
+	  -> Runners
+	  -> click on New self Hosted Runner 
+  ```
+
+![alt text](.images/github.com_annamthej_CI-CD-Github-Actions_settings_actions_runners_new_arch=x64&os=linux.png)
+
+- Install and Configure 
+
+![alt text](.images/image-2.png)
+
+![alt text](.images/image-3.png)
+
+- Run Below Yaml file for testing 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+===
+
 # Nodejs Code Initialize Process from starting 
 ## 1. Nodejs project structure
 ```bash
